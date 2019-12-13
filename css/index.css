@@ -163,10 +163,11 @@ p {
   width: 100%;
   margin: 0 auto;
 }
-header {
+#nav-div {
   width: 100%;
+  background-color: #F6F6F6;
 }
-header div {
+#nav-div div {
   max-width: 70%;
   margin: 0 auto;
   display: flex;
@@ -175,34 +176,64 @@ header div {
   align-items: center;
 }
 @media (max-width: 500px) {
-  header div {
+  #nav-div div {
     flex-direction: column;
     justify-content: space-around;
   }
 }
-header div h1 {
+#nav-div div h1 {
   width: 100%;
   margin: 20px 0px;
   text-align: center;
 }
-header div nav {
+@media (max-width: 500px) {
+  #nav-div div h1 {
+    font-size: 3rem;
+  }
+}
+#nav-div div nav {
   width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   margin: 0 auto;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 @media (max-width: 500px) {
-  header div nav {
-    width: 100%;
+  #nav-div div nav {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 }
-header div nav a {
+#nav-div div nav a {
   text-decoration: none;
   color: black;
   margin-bottom: 20px;
+}
+#nav-div div nav a:hover {
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%,
+  100% {
+    color: black;
+  }
+  30% {
+    color: red;
+  }
+  40% {
+    color: orange;
+  }
+  60% {
+    color: yellow;
+  }
+  80% {
+    color: white;
+  }
 }
 footer {
   color: #22283B;
@@ -234,6 +265,21 @@ footer {
   border-radius: 20px;
   height: 100%;
 }
+@media (max-width: 500px) {
+  .home .space-images img {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .home .space-images img:nth-child(2) {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .home .space-images img:nth-child(3) {
+    display: none;
+  }
+}
 .home .visit-planets {
   padding: 15px;
 }
@@ -250,8 +296,23 @@ footer {
   display: flex;
   justify-content: center;
 }
+@media (max-width: 500px) {
+  .home .walk {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+  }
+}
 .home .walk .walk-text {
   width: 50%;
+}
+@media (max-width: 500px) {
+  .home .walk .walk-text {
+    width: 100%;
+    margin-top: 10px;
+  }
 }
 .home .walk .walk-text h3 {
   margin-bottom: 10px;
@@ -268,9 +329,29 @@ footer {
   max-width: 40%;
   text-align: center;
 }
+@media (max-width: 500px) {
+  .home .walk .walk-text .btn {
+    max-width: 100%;
+  }
+}
+.home .walk .walk-text .btn:hover {
+  font-size: 2.2rem;
+  background-color: #F6F6F6;
+  color: #23293B;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  max-width: 40%;
+  text-align: center;
+  cursor: pointer;
+}
 .home .walk .walk-img {
   width: 46%;
   margin-left: 4%;
+}
+@media (max-width: 500px) {
+  .home .walk .walk-img {
+    width: 100%;
+  }
 }
 .home .walk .walk-img img {
   width: 100%;

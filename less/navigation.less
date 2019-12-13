@@ -1,8 +1,8 @@
 // Navigation code here
 
-header {
+#nav-div {
     width: 100%;
-    
+    background-color: @nav-bg;
 
     div {
         .desktop-width(70%);
@@ -20,24 +20,47 @@ header {
             text-align: center;
 
             @media @mobile {
-                
+                font-size: 3.0rem;
             }
         }
         nav {
             width: 80%;
             .display-flex(row, space-around, center);
             margin: 0 auto;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             
 
             @media @mobile {
-                width: 100%;
+                font-size: 1.0rem;
+                .display-flex(row, space-between, center);
             }
 
             a {
                 text-decoration: none;
                 color: black;
                 margin-bottom: 20px;
+
+                &:hover {
+                    animation: pulse 2s infinite;
+
+                }
+                @keyframes pulse {
+                    0%, 100% {
+                        color: black;
+                    }
+                    30% {
+                        color: red;
+                    }
+                    40% {
+                        color: orange;
+                    }
+                    60% {
+                        color: yellow;
+                    }
+                    80% {
+                        color: white;
+                    }
+                }
             }
         }
     }
