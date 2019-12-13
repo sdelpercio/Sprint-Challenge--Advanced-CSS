@@ -172,6 +172,7 @@ header div {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 }
 @media (max-width: 500px) {
   header div {
@@ -187,6 +188,7 @@ header div h1 {
 header div nav {
   width: 80%;
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
   margin: 0 auto;

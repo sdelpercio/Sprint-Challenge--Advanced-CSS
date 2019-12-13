@@ -5,11 +5,9 @@ header {
     
 
     div {
-        max-width: 70%;
+        .desktop-width(70%);
         margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        .display-flex(column, space-between, @align: center);
 
         @media @mobile {
             flex-direction: column;
@@ -27,9 +25,7 @@ header {
         }
         nav {
             width: 80%;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
+            .display-flex(row, space-around, center);
             margin: 0 auto;
             font-size: 1.8rem;
             
